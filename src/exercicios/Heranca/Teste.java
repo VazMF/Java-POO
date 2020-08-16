@@ -38,7 +38,7 @@ public class Teste {
 
             switch (opcao){
                 case 1:
-                    ConsultaPrata prata = new ConsultaPrata();
+                    ConsultasPrata prata = new ConsultasPrata();
                     prata.setNomePaciente(nome);
                     prata.setAnoInclusao(ano);
                     prata.setMatricula(matricula);
@@ -47,7 +47,7 @@ public class Teste {
                     System.out.println("Você tem 20% de desconto, sua consulta custará R$" + prata.getValorConsulta());
                     break;
                 case 2:
-                    ConsultaDiamante diamante = new ConsultaDiamante();
+                    ConsultasDiamante diamante = new ConsultasDiamante();
                     diamante.setNomePaciente(nome);
                     diamante.setAnoInclusao(ano);
                     diamante.setMatricula(matricula);
@@ -56,7 +56,7 @@ public class Teste {
                     System.out.println("Você tem 40% de desconto, sua consulta custará R$" + diamante.getValorConsulta());
                     break;
                 case 3:
-                    ConsultaOuro ouro = new ConsultaOuro();
+                    ConsultasOuro ouro = new ConsultasOuro();
                     ouro.setNomePaciente(nome);
                     ouro.setAnoInclusao(ano);
                     ouro.setMatricula(matricula);
@@ -65,7 +65,7 @@ public class Teste {
                     System.out.println("A consulta custará " + ouro.getValorConsulta());
                     break;
                 case 4:
-                    ConsultaFamilia familia = new ConsultaFamilia();
+                    ConsultasFamilia familia = new ConsultasFamilia();
                     familia.setNomePaciente(nome);
                     familia.setAnoInclusao(ano);
                     familia.setMatricula(matricula);

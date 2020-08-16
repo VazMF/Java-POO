@@ -1,6 +1,6 @@
 package exercicios.Heranca;
 
-public class ConsultaOuro extends Consulta{
+public class ConsultasOuro extends Consulta{
 
     @Override
     public double getValorConsulta() {

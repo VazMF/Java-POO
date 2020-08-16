@@ -23,7 +23,7 @@ public class Consulta {
         if (matricula.length() == 5){
             this.matricula = matricula;
         }else {
-            System.out.println("Informe uma matrícula com 5 caracteres.");
+            System.out.println("Informe uma matrícula com cinco caracteres.");
         }
     }
 
