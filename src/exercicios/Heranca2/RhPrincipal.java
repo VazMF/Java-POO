@@ -15,15 +15,18 @@ public class RhPrincipal {
         int opcao = 0;
         int matricula;
 
+
         while (opcao != 9) {
-            System.out.println("1 - Cadastrar empregado");
-            System.out.println("2 - Listar todos empregados");
-            System.out.println("3 - Cadastrar departamento");
-            System.out.println("4 - Adicionar empregado no Departamento");
-            System.out.println("5 - Remover empregado do Departamento");   //implementação do aluno
-            System.out.println("6 - Listar Empregados por departamento");  //implementação do aluno
-            System.out.println("7 - Listar Departamento");  //implementação do aluno
-            System.out.println("9 - Fim");
+            System.out.println("-----------------------------------------");
+            System.out.println("[ 1 ] Cadastrar empregado");
+            System.out.println("[ 2 ] Listar todos empregados");
+            System.out.println("[ 3 ] Cadastrar departamento");
+            System.out.println("[ 4 ] Adicionar empregado no Departamento");
+            System.out.println("[ 5 ] Remover empregado do Departamento");   //implementação do aluno
+            System.out.println("[ 6 ] Listar Empregados por departamento");  //implementação do aluno
+            System.out.println("[ 7 ] Listar Departamentos");  //implementação do aluno
+            System.out.println("[ 9 ] Encerrar");
+            System.out.print("ESCOLHA UMA DAS OPÇÕES: ");
             opcao = teclado.nextInt();
             teclado.nextLine();
             switch (opcao) {
@@ -52,9 +55,9 @@ public class RhPrincipal {
                     ctr.adicionaEmpDep(nome, matricula);
                     break;
                 case 5:
-                    System.out.println("Departamento: ");
+                    System.out.print("Departamento: ");
                     nome = teclado.nextLine();
-                    System.out.println("Matricula do Empregado: ");
+                    System.out.print("Matricula do Empregado: ");
                     matricula = teclado.nextInt();
                     teclado.nextLine();
                     ctr.removeEmpDep(nome, matricula);
@@ -69,5 +72,6 @@ public class RhPrincipal {
                     break;
             }
         }
+        System.out.println("Programa encerrado. Volte sempre :)");
     }
 }

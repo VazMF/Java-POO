@@ -12,24 +12,21 @@ public class Controle {
         listDep = new ArrayList<>();
     }
 
-    public void cadastraEmpregado(String nome, double salario)
-    {
+    public void cadastraEmpregado(String nome, double salario){
         //criar objeto empregado
         Empregado emp = new Empregado(nome,salario);
         //inserir objeto empregado na lista listEmp
         listEmp.add(emp);
     }
 
-    public void cadastraDepartamento(String nome)
-    {
+    public void cadastraDepartamento(String nome){
         //criar objeto departamento
         Departamento dep = new Departamento(nome);
         //inserir objeto departamento na lista listDep
         listDep.add(dep);
     }
 
-    public String listarEmpregado()
-    {
+    public String listarEmpregado(){
         //percorrer listEmp e retornar nome e
         //salario de todos os empregados cadastrados
         String saida="";
@@ -74,7 +71,7 @@ public class Controle {
                 for (int x=0; x < listEmp.size(); x++){
                     Empregado auxEmp = listEmp.get(x);
                     if (auxEmp.getMatricula() == matricula){
-                        listEmp.remove(auxEmp);
+                        depAux.removeEmpregado(auxEmp);
                         break;
                     }
                 }
@@ -86,14 +83,11 @@ public class Controle {
     public String listarEmpregado(String departamento){     //implementação do aluno
         //retorne os empregados do departamento informado como parâmetro
         String saida = "";
+        Departamento auxDep;
         for (int i=0; i<listDep.size(); i++){
-            Departamento auxDep;
             auxDep = listDep.get(i);
             if (auxDep.getNome().equals(departamento)){
-                for (int x=0; x < listEmp.size(); x++){
-                    Empregado auxEmp = listEmp.get(x);
-                    saida += "Nome: " + auxEmp.getNome() + "\n";
-                }
+                saida = auxDep.listarEmpregado();
             }
         }
         return saida;
