@@ -19,10 +19,10 @@ public class CadastroDeConsultas {
             consulta = new ConsultaPrata();
             consulta.setTipo(tipo);
         }else if (tipo == 2){
-            consulta = new ConsultaDiamante();
+            consulta = new ConsultaOuro();
             consulta.setTipo(tipo);
         }else if (tipo == 3){
-            consulta = new ConsultaOuro();
+            consulta = new ConsultaDiamante();
             consulta.setTipo(tipo);
         }else if (tipo == 4){
             consulta = new ConsultaFamilia();
@@ -56,7 +56,7 @@ public class CadastroDeConsultas {
         Consulta auxCon;
         for (int i=0; i<listaConsultas.size(); i++){
             auxCon = listaConsultas.get(i);
-            if (auxCon.getTipo() == tipo);{
+            if (auxCon.getTipo() == tipo){
                 numCon++;
 
             }

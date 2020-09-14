@@ -75,7 +75,7 @@ public class SistemaDaClinica {
                     System.out.println("[ 4 ] Consulta família");
                     System.out.println("Escolha um tipo de consulta: ");
                     tipo = input.nextInt();
-                    System.out.println("Valor total: " + cadastro.totalCon(tipo));
+                    System.out.println("Valor total: R$" + cadastro.totalCon(tipo));
                     break;
             }
 
