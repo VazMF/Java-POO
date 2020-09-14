@@ -6,8 +6,7 @@ public class ConsultaOuro extends Consulta {
     public double getValorCon() {
         if (getAno() <= 2000){
             return 0;
-        }
-        else{
+        } else{
             return super.getValorCon() - (super.getValorCon() * 30 / 100);
         }
     }

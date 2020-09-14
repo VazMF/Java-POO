@@ -52,16 +52,16 @@ public class CadastroDeConsultas {
 
     public int returnNumCon(int tipo){
         int out = 0;
-        int numCon = 1;
-        Consulta auxCon = new Consulta();
+        int numCon = 0;
+        Consulta auxCon;
         for (int i=0; i<listaConsultas.size(); i++){
             auxCon = listaConsultas.get(i);
             if (auxCon.getTipo() == tipo);{
                 numCon++;
-                out = numCon;;
-                break;
+
             }
         }
+        out = numCon;
         return out;
     }
 

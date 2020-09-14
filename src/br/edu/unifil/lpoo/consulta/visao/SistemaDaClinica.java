@@ -16,7 +16,6 @@ public class SistemaDaClinica {
         int depNum;
         int ano;
         double valor = 0;
-        int aux = 0;
         int tipo;
 
         while (opc != 9){
@@ -28,13 +27,14 @@ public class SistemaDaClinica {
             System.out.println("[ 9 ] Encerrar");
             System.out.print("O que deseja fazer? ");
             opc = input.nextInt();
+            input.nextLine();
             switch (opc){
                 case 1:
                     System.out.println("Preencha as informações solicitadas: ");
                     System.out.print("Nome: ");
-                    nome = input.next();
+                    nome = input.nextLine();
                     System.out.print("Num. Matrícula: ");
-                    matricula = input.next();
+                    matricula = input.nextLine();
                     System.out.print("Num. Dependentes: ");
                     depNum = input.nextInt();
                     System.out.print("Ano de inclusão do plano: ");
@@ -51,35 +51,36 @@ public class SistemaDaClinica {
                     System.out.println("Sua consulta foi cadastrada com sucesso!");
                     break;
                 case 2:
-                    System.out.println("Escolha um tipo de consulta: ");
                     System.out.println("[ 1 ] Consulta prata");
                     System.out.println("[ 2 ] Consulta ouro");
                     System.out.println("[ 3 ] Consulta diamante");
                     System.out.println("[ 4 ] Consulta família");
+                    System.out.println("Escolha um tipo de consulta: ");
                     tipo = input.nextInt();
                     System.out.println(cadastro.detailsConsulta(tipo));
                     break;
                 case 3:
-                    System.out.println("Escolha um tipo de consulta: ");
                     System.out.println("[ 1 ] Consulta prata");
                     System.out.println("[ 2 ] Consulta ouro");
                     System.out.println("[ 3 ] Consulta diamante");
                     System.out.println("[ 4 ] Consulta família");
+                    System.out.println("Escolha um tipo de consulta: ");
                     tipo = input.nextInt();
                     System.out.println("Total de consultas: " + cadastro.returnNumCon(tipo));
                     break;
                 case 4:
-                    System.out.println("Escolha um tipo de consulta: ");
                     System.out.println("[ 1 ] Consulta prata");
                     System.out.println("[ 2 ] Consulta ouro");
                     System.out.println("[ 3 ] Consulta diamante");
                     System.out.println("[ 4 ] Consulta família");
+                    System.out.println("Escolha um tipo de consulta: ");
                     tipo = input.nextInt();
                     System.out.println("Valor total: " + cadastro.totalCon(tipo));
                     break;
             }
 
         }
+        System.out.println("Programa encerrado.");
 
     }
 }
