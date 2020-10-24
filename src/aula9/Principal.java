@@ -15,7 +15,7 @@ public class Principal {
 
         while (opc != 9) {
             System.out.println("[ 1 ] Carregar array");
-            System.out.println("[ 2 ] Mostrar arrays");
+            System.out.println("[ 2 ] Mostrar array");
             System.out.println("[ 3 ] Dividir array");
             System.out.println("[ 9 ] Encerrar programa");
             System.out.print("Escolha uma opção: ");
