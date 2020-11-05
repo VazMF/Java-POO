@@ -8,6 +8,7 @@ public class Controle {
 
     public Controle() {
         listaFunc = new ArrayList<>();
+        listaForn = new ArrayList<>();
     }
 
     public void inserirFuncionario(Funcionario func) {
